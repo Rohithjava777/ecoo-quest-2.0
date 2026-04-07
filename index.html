@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO QUEST | TERMINAL v3.1</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="terminal-container">
+        <div class="crt-glow"></div>
+        
+        <header class="main-header">
+            <div class="sys-status">● SYSTEM ACTIVE</div>
+            <h1 class="title">ECO QUEST : PLANETARY RESTORATION UNIT</h1>
+            <div class="timer" id="clock-display">00:00:00</div>
+        </header>
+
+        <div class="dashboard">
+            
+            <section class="panel profile-panel">
+                <h2 class="panel-label">IDENTITY VERIFIED</h2>
+                <div class="profile-content">
+                    <div class="id-badge">
+                        <div class="star-rank">★</div>
+                        <div class="avatar-glow"><span class="initial">R</span></div>
+                    </div>
+                    <div class="bio-data">
+                        <div class="data-row"><span class="data-label">OPERATOR</span><span class="data-val purple-text">ROHITH RAJU</span></div>
+                        <div class="data-row"><span class="data-label">CLASS</span><span class="data-val">SILVER ELITE</span></div>
+                        <div class="data-row"><span class="data-label">STATUS</span><span class="data-val green-text">ACTIVE</span></div>
+                    </div>
+                    <div class="exp-container">
+                        <div class="exp-info"><span>LVL 10</span><span>85% COMPLETED</span></div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel mission-panel">
+                <h2 class="panel-label">MISSION LOG</h2>
+                <div class="quest-container">
+                    <div class="quest-row glow-border"><p>PLASTIC PURGE</p><input type="file" id="q1" class="file-input"><label for="q1" class="exe-btn purple-btn">EXECUTE</label></div>
+                    <div class="quest-row glow-border"><p>GREEN COMMUTE</p><input type="file" id="q2" class="file-input"><label for="q2" class="exe-btn purple-btn">EXECUTE</label></div>
+                    <div class="quest-row glow-border"><p>HYDRO SAVER</p><input type="file" id="q3" class="file-input"><label for="q3" class="exe-btn purple-btn">EXECUTE</label></div>
+                    <div class="quest-row glow-border"><p>REFOREST DATA</p><input type="file" id="q4" class="file-input"><label for="q4" class="exe-btn purple-btn">EXECUTE</label></div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel-label">OCEANIC INTELLIGENCE</h2>
+                <div class="fact-display">
+                    <div class="ocean-fact-lines">
+                        <p>> 01: The ocean covers 71% of Earth's surface.</p>
+                        <p>> 02: 95% of the underwater world remains unexplored.</p>
+                        <p>> 03: The Pacific is the largest and deepest ocean.</p>
+                        <p>> 04: The Mariana Trench is 11,034 meters deep.</p>
+                        <p>> 05: Oceans produce over 50% of the world's oxygen.</p>
+                        <p>> 06: Phytoplankton are the main oxygen producers.</p>
+                        <p>> 07: The Great Barrier Reef is visible from space.</p>
+                        <p>> 08: Sound travels 4.5 times faster in water.</p>
+                        <p>> 09: More artifacts in ocean than museums.</p>
+                        <p>> 10: 90% of volcanic activity is underwater.</p>
+                        <p>> 11: Average ocean depth is 3.7 kilometers.</p>
+                        <p>> 12: Sea levels risen 20cm since 1900.</p>
+                        <p>> 13: 8 million tons of plastic enter yearly.</p>
+                        <p>> 14: Blue Whales are the largest ever.</p>
+                        <p>> 15: Pressure is like an elephant on a thumb.</p>
+                    </div>
+                </div>
+                <div class="growth-box">
+                    <p class="data-label">RESTORE IMPACT</p>
+                    <div class="bar-bg green-border"><div class="bar-fill growth-fill" id="growth-fill"></div></div>
+                </div>
+                <button class="share-btn purple-btn" id="ig-btn">SHARE IMPACT</button>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel-label">GEOSPATIAL DATA</h2>
+                <div class="earth-display">
+                    <div class="earth-sphere">
+                        <div class="land l1"></div>
+                        <div class="land l2"></div>
+                    </div>
+                </div>
+                <div class="vertical-spacer"></div>
+                <div class="env-stats">
+                    <div class="stat-line"><span>RECOVERY</span><span>12%</span></div>
+                    <div class="stat-line"><span>CO2 PPM</span><span class="purple-text">415.2</span></div>
+                    <div class="stat-line"><span>BIODIVERSITY</span><span class="green-text">STABLE</span></div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="terminal-footer">
+            <div class="mod purple-nav">NAVIGATE</div>
+            <div class="mod purple-nav active-nav">DASHBOARD</div>
+            <div class="mod earth-btn" onclick="openEarthView()">VIEW EARTH</div>
+        </footer>
+    </div>
+
+    <div id="earth-modal" class="earth-overlay">
+        <button class="close-btn" onclick="closeEarthView()">TERMINATE VIEW</button>
+        <div class="modal-content">
+            <div class="realistic-earth"></div>
+            <h2 class="purple-text">CORE SYNCHRONIZATION</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

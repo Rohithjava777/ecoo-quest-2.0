@@ -1,0 +1,81 @@
+:root {
+    --amber: #ffb000;
+    --purple: #a020f0;
+    --green: #2ecc71;
+    --silver: #e0e0e0;
+    --dark-purple: #1a0033;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { background: #000; color: var(--amber); font-family: 'Space Grotesk', sans-serif; height: 100vh; overflow: hidden; }
+
+.terminal-container { height: 100%; display: flex; flex-direction: column; padding: 20px; position: relative; }
+
+.crt-glow {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(255, 176, 0, 0.02) 50%);
+    background-size: 100% 4px; pointer-events: none; z-index: 10;
+}
+
+.main-header { display: flex; justify-content: space-between; border: 1px solid var(--amber); padding: 15px; margin-bottom: 20px; }
+
+/* DASHBOARD GRID */
+.dashboard { display: grid; grid-template-columns: 1fr 1fr 1.2fr 1fr; gap: 20px; flex: 1; margin-bottom: 20px; min-height: 0; }
+
+.panel { border: 1px solid var(--amber); background: rgba(255, 176, 0, 0.02); display: flex; flex-direction: column; min-height: 0; }
+.panel-label { background: var(--amber); color: #000; font-size: 0.6rem; padding: 3px 8px; font-weight: bold; width: fit-content; }
+
+/* MISSION LOG PURPLE GLOW */
+.mission-panel { border-color: var(--purple); }
+.glow-border { 
+    border: 1px solid rgba(160, 32, 240, 0.3); 
+    box-shadow: 0 0 10px rgba(160, 32, 240, 0.1);
+    transition: 0.3s;
+}
+.glow-border:hover {
+    border-color: var(--purple);
+    box-shadow: 0 0 15px rgba(160, 32, 240, 0.4);
+    background: rgba(160, 32, 240, 0.05);
+}
+
+/* PROFILE (STAYED PERFECT) */
+.profile-panel { border-color: var(--purple); }
+.id-badge { text-align: center; margin: 20px 0; position: relative; }
+.avatar-glow {
+    width: 85px; height: 85px; border: 3px solid var(--purple); border-radius: 50%;
+    margin: 0 auto; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 20px var(--purple);
+}
+.initial { font-size: 2.8rem; color: var(--purple); font-weight: bold; }
+.star-rank { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); color: var(--silver); font-size: 1.8rem; text-shadow: 0 0 10px #fff; }
+
+/* QUESTS */
+.quest-container { padding: 15px; overflow-y: auto; }
+.quest-row { padding: 12px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
+.file-input { display: none; }
+
+/* OCEAN FACT DISPLAY */
+.fact-display { padding: 15px; font-family: 'Share Tech Mono', monospace; flex: 1; overflow-y: auto; }
+.ocean-fact-lines p { font-size: 0.75rem; color: var(--green); margin-bottom: 3px; }
+
+/* PURPLE ACCENTS */
+.purple-text { color: var(--purple); }
+.green-text { color: var(--green); }
+.purple-btn { background: var(--purple) !important; color: white !important; border: none !important; font-weight: bold; cursor: pointer; padding: 10px; transition: 0.3s; }
+.purple-btn:hover { box-shadow: 0 0 20px var(--purple); filter: brightness(1.2); }
+
+/* FOOTER NAV (PURPLE) */
+.terminal-footer { display: flex; border: 1px solid var(--purple); background: var(--dark-purple); }
+.mod { flex: 1; padding: 12px; text-align: center; border-right: 1px solid var(--purple); cursor: pointer; font-size: 0.75rem; color: #fff; }
+.active-nav { background: var(--purple); font-weight: bold; }
+
+/* EARTH SPACING */
+.earth-display { height: 150px; display: flex; justify-content: center; align-items: center; }
+.earth-sphere { width: 100px; height: 100px; border: 2px solid var(--purple); border-radius: 50%; position: relative; box-shadow: 0 0 25px var(--purple); }
+.land { position: absolute; background: var(--green); border-radius: 40%; opacity: 0.8; }
+.l1 { width: 30px; height: 20px; top: 20%; left: 15%; }
+.l2 { width: 40px; height: 25px; bottom: 20%; right: 10%; }
+.vertical-spacer { height: 30px; } /* Added for spacing below earth */
+.env-stats { padding: 15px; font-size: 0.8rem; }
+.stat-line { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid rgba(255,176,0,0.1); }
