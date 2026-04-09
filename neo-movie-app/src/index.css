@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bgCream text-white font-sans antialiased overflow-x-hidden min-h-screen;
+  }
+  
+  button,
+  .neo-button,
+  a[class*="neo-border"],
+  div[class*="cursor-pointer"] {
+    color: #FF2A93 !important;
+    text-shadow: 0 0 8px #FF2A93 !important;
+  }
+}
+
+@layer utilities {
+  .neo-border {
+    @apply border-2 border-borderBlack;
+  }
+  
+  .neo-shadow {
+    @apply shadow-neo;
+  }
+  
+  .neo-shadow-lg {
+    @apply shadow-neo-lg;
+  }
+  
+  .neo-hover-effect {
+    @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-neo hover:bg-neutral-50 hover:z-10 active:translate-y-0 active:shadow-none;
+  }
+  
+  .neo-button {
+    @apply neo-border shadow-neo font-bold px-6 py-2 bg-[#1A0033] text-[#FF2A93] [text-shadow:0_0_8px_#FF2A93] transition-all duration-300 hover:-translate-y-1 hover:shadow-neo-lg active:translate-y-1 active:shadow-none;
+  }
+  
+  .neo-button-primary {
+    @apply neo-button bg-accentOrange hover:bg-[#9333EA] hover:shadow-glow-orange;
+  }
+
+  .neo-button-yellow {
+    @apply neo-button bg-accentYellow hover:bg-[#7E22CE] hover:shadow-glow;
+  }
+  
+  /* Scrollbar styling for that retro feel */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #E9D5FF;
+    border-left: 1px solid #1A1A1A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #8B5CF6;
+  }
+}
